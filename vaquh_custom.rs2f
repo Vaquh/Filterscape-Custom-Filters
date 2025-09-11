@@ -2,7 +2,10 @@
 hidden: true
 name: header
 */
-meta { name = "vaquh/custom"; }
+meta {
+  name = "vaquh/custom"
+  description = "Custom filter based on riktenx/filterscape"
+}
 
 
 
@@ -234,15 +237,15 @@ type: enumlist
 group: Ammo
 label: 'Hide dropped arrows'
 enum: [
-  {"label":"bronze arrow","value":"bronze arrow*},
-  {"label":"iron arrow","value":"iron arrow*},
-  {"label":"steel arrow","value":"steel arrow*},
-  {"label":"mithril arrow","value":"mithril arrow*},
-  {"label":"adamant arrow","value":"adamant arrow*},
-  {"label":"rune arrow","value":"rune arrow*},
-  {"label":"amethyst arrow","value":"amethyst arrow*},
-  {"label":"dragon arrow","value":"dragon arrow*}
-  ]
+  {"label":"bronze arrow","value":"bronze arrow*"},
+  {"label":"iron arrow","value":"iron arrow*"},
+  {"label":"steel arrow","value":"steel arrow*"},
+  {"label":"mithril arrow","value":"mithril arrow*"},
+  {"label":"adamant arrow","value":"adamant arrow*"},
+  {"label":"rune arrow","value":"rune arrow*"},
+  {"label":"amethyst arrow","value":"amethyst arrow*"},
+  {"label":"dragon arrow","value":"dragon arrow*"}
+]
 */
 #define VAR_JUNK_HIDE_AMMO_ARROWS ["bronze arrow","iron arrow","steel arrow","mithril arrow","adamant arrow","rune arrow","amethyst arrow","dragon arrow"]
 apply (name:VAR_JUNK_HIDE_AMMO_ARROWS) { hidden = true; }
@@ -261,16 +264,16 @@ type: enumlist
 group: Ammo
 label: 'Hide dropped darts'
 enum: [
-  {"label":"bronze dart","value":"bronze dart*},
-  {"label":"iron dart","value":"iron dart*},
-  {"label":"steel dart","value":"steel dart*},
-  {"label":"mithril dart","value":"mithril dart*},
-  {"label":"adamant dart","value":"adamant dart*},
-  {"label":"rune dart","value":"rune dart*},
-  {"label":"amethyst dart","value":"amethyst dart*},
-  {"label":"dragon dart","value":"dragon dart*},
-  {"label":"atlatl dart","value":"atlatl dart*}
-  ]
+  {"label":"bronze dart","value":"bronze dart*"},
+  {"label":"iron dart","value":"iron dart*"},
+  {"label":"steel dart","value":"steel dart*"},
+  {"label":"mithril dart","value":"mithril dart*"},
+  {"label":"adamant dart","value":"adamant dart*"},
+  {"label":"rune dart","value":"rune dart*"},
+  {"label":"amethyst dart","value":"amethyst dart*"},
+  {"label":"dragon dart","value":"dragon dart*"},
+  {"label":"atlatl dart","value":"atlatl dart*"}
+]
 */
 #define VAR_JUNK_HIDE_AMMO_DARTS ["bronze dart","iron dart","steel dart","mithril dart","adamant dart","rune dart","amethyst dart","dragon dart","atlatl dart"]
 apply (name:VAR_JUNK_HIDE_AMMO_DARTS) { hidden = true; }
@@ -280,15 +283,15 @@ type: enumlist
 group: Ammo
 label: 'Hide dropped javelins'
 enum: [
-  {"label":"bronze javelin","value":"bronze javelin*},
-  {"label":"iron javelin","value":"iron javelin*},
-  {"label":"steel javelin","value":"steel javelin*},
-  {"label":"mithril javelin","value":"mithril javelin*},
-  {"label":"adamant javelin","value":"adamant javelin*},
-  {"label":"rune javelin","value":"rune javelin*},
-  {"label":"amethyst javelin","value":"amethyst javelin*},
-  {"label":"dragon javelin","value":"dragon javelin*}
-  ]
+  {"label":"bronze javelin","value":"bronze javelin*"},
+  {"label":"iron javelin","value":"iron javelin*"},
+  {"label":"steel javelin","value":"steel javelin*"},
+  {"label":"mithril javelin","value":"mithril javelin*"},
+  {"label":"adamant javelin","value":"adamant javelin*"},
+  {"label":"rune javelin","value":"rune javelin*"},
+  {"label":"amethyst javelin","value":"amethyst javelin*"},
+  {"label":"dragon javelin","value":"dragon javelin*"}
+]
 */
 #define VAR_JUNK_HIDE_AMMO_JAVELINS []
 apply (name:VAR_JUNK_HIDE_AMMO_JAVELINS) { hidden = true; }
@@ -1065,7 +1068,7 @@ CONST_GARGOYLE_RULE (name:VAR_GARGOYLE_ENUMLIST_FILTER_TERTIARY) {
 
 #define CONST_AREA_ABYSSALDEMON0 [3016,4874,0,3061,4917,0] // [[Abyssal Area]] ({{Fairycode|alr}})
 #define CONST_AREA_ABYSSALDEMON1 [1669,10054,0,1678,10098,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_ABYSSALDEMON2 [3408,3562,2,3427,3576,2] // [[Slayer Tower]] ({{FloorNumber|uk
+#define CONST_AREA_ABYSSALDEMON2 [3408,3562,2,3427,3576,2] // [[Slayer Tower]] ({{FloorNumber|uk}})
 #define CONST_AREA_ABYSSALDEMON3 [3427,9954,3,3445,9974,3] // [[Slayer Tower|Slayer Tower (basement)]]
 #define CONST_AREA_ABYSSALDEMON4 [3335,10158,0,3347,10168,0] // [[Wilderness Slayer Cave]]
 #define CONST_ABYSSALDEMON_RULE(_cond) rule ((area:CONST_AREA_ABYSSALDEMON0 ||   area:CONST_AREA_ABYSSALDEMON1 ||   area:CONST_AREA_ABYSSALDEMON2 ||   area:CONST_AREA_ABYSSALDEMON3 ||   area:CONST_AREA_ABYSSALDEMON4) && (_cond))
@@ -5676,12 +5679,12 @@ label: "Always show untradeables"
 */
 #define VAR_VALUE_SHOWUNTRADEABLE true
 
-rule (value:>=VAR_VALUE_T5_VALUE) { VAR_VALUE_T5_CUSTOMSTYLE }
-rule (value:>=VAR_VALUE_T4_VALUE) { VAR_VALUE_T4_CUSTOMSTYLE }
-rule (value:>=VAR_VALUE_T3_VALUE) { VAR_VALUE_T3_CUSTOMSTYLE }
-rule (value:>=VAR_VALUE_T2_VALUE) { VAR_VALUE_T2_CUSTOMSTYLE }
-rule (value:>=VAR_VALUE_T1_VALUE) { VAR_VALUE_T1_CUSTOMSTYLE }
-rule (value:>=VAR_VALUE_T0_VALUE) { VAR_VALUE_T0_CUSTOMSTYLE }
+rule (gevalue:>=VAR_VALUE_T5_VALUE) { VAR_VALUE_T5_CUSTOMSTYLE }
+rule (gevalue:>=VAR_VALUE_T4_VALUE) { VAR_VALUE_T4_CUSTOMSTYLE }
+rule (gevalue:>=VAR_VALUE_T3_VALUE) { VAR_VALUE_T3_CUSTOMSTYLE }
+rule (gevalue:>=VAR_VALUE_T2_VALUE) { VAR_VALUE_T2_CUSTOMSTYLE }
+rule (gevalue:>=VAR_VALUE_T1_VALUE) { VAR_VALUE_T1_CUSTOMSTYLE }
+rule (gevalue:>=VAR_VALUE_T0_VALUE) { VAR_VALUE_T0_CUSTOMSTYLE }
 
 rule ((tradeable:true || !VAR_VALUE_SHOWUNTRADEABLE) && value:<VAR_VALUE_MINVALUE) {
   hidden = true;
