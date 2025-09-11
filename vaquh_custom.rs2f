@@ -268,9 +268,8 @@ enum: [
   {"label":"adamant dart","value":"adamant dart*},
   {"label":"rune dart","value":"rune dart*},
   {"label":"amethyst dart","value":"amethyst dart*},
-  {"label":"dragon dart","value":"dragon dart*}
+  {"label":"dragon dart","value":"dragon dart*},
   {"label":"atlatl dart","value":"atlatl dart*}
-  "atlatl dart"
   ]
 */
 #define VAR_JUNK_HIDE_AMMO_DARTS ["bronze dart","iron dart","steel dart","mithril dart","adamant dart","rune dart","amethyst dart","dragon dart","atlatl dart"]
@@ -280,7 +279,16 @@ apply (name:VAR_JUNK_HIDE_AMMO_DARTS) { hidden = true; }
 type: enumlist
 group: Ammo
 label: 'Hide dropped javelins'
-enum: ["bronze javelin","iron javelin","steel javelin","mithril javelin","adamant javelin","rune javelin","amethyst javelin","dragon javelin"]
+enum: [
+  {"label":"bronze javelin","value":"bronze javelin*},
+  {"label":"iron javelin","value":"iron javelin*},
+  {"label":"steel javelin","value":"steel javelin*},
+  {"label":"mithril javelin","value":"mithril javelin*},
+  {"label":"adamant javelin","value":"adamant javelin*},
+  {"label":"rune javelin","value":"rune javelin*},
+  {"label":"amethyst javelin","value":"amethyst javelin*},
+  {"label":"dragon javelin","value":"dragon javelin*}
+  ]
 */
 #define VAR_JUNK_HIDE_AMMO_JAVELINS []
 apply (name:VAR_JUNK_HIDE_AMMO_JAVELINS) { hidden = true; }
