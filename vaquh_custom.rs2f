@@ -233,7 +233,16 @@ apply (VAR_JUNK_HIDE_EQUIP_RUNE && name:CONST_JUNK_EQUIP_RUNE) { hidden = true; 
 type: enumlist
 group: Ammo
 label: 'Hide dropped arrows'
-enum: ["bronze arrow","iron arrow","steel arrow","mithril arrow","adamant arrow","rune arrow","amethyst arrow","dragon arrow"]
+enum: [
+  {"label":"bronze arrow","value":"bronze arrow*},
+  {"label":"iron arrow","value":"iron arrow*},
+  {"label":"steel arrow","value":"steel arrow*},
+  {"label":"mithril arrow","value":"mithril arrow*},
+  {"label":"adamant arrow","value":"adamant arrow*},
+  {"label":"rune arrow","value":"rune arrow*},
+  {"label":"amethyst arrow","value":"amethyst arrow*},
+  {"label":"dragon arrow","value":"dragon arrow*}
+  ]
 */
 #define VAR_JUNK_HIDE_AMMO_ARROWS ["bronze arrow","iron arrow","steel arrow","mithril arrow","adamant arrow","rune arrow","amethyst arrow","dragon arrow"]
 apply (name:VAR_JUNK_HIDE_AMMO_ARROWS) { hidden = true; }
@@ -251,7 +260,18 @@ apply (name:VAR_JUNK_HIDE_AMMO_BOLTS) { hidden = true; }
 type: enumlist
 group: Ammo
 label: 'Hide dropped darts'
-enum: ["bronze dart","iron dart","steel dart","mithril dart","adamant dart","rune dart","amethyst dart","dragon dart","atlatl dart"]
+enum: [
+  {"label":"bronze dart","value":"bronze dart*},
+  {"label":"iron dart","value":"iron dart*},
+  {"label":"steel dart","value":"steel dart*},
+  {"label":"mithril dart","value":"mithril dart*},
+  {"label":"adamant dart","value":"adamant dart*},
+  {"label":"rune dart","value":"rune dart*},
+  {"label":"amethyst dart","value":"amethyst dart*},
+  {"label":"dragon dart","value":"dragon dart*}
+  {"label":"atlatl dart","value":"atlatl dart*}
+  "atlatl dart"
+  ]
 */
 #define VAR_JUNK_HIDE_AMMO_DARTS ["bronze dart","iron dart","steel dart","mithril dart","adamant dart","rune dart","amethyst dart","dragon dart","atlatl dart"]
 apply (name:VAR_JUNK_HIDE_AMMO_DARTS) { hidden = true; }
