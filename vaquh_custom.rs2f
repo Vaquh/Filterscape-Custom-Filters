@@ -2,10 +2,8 @@
 hidden: true
 name: header
 */
-meta {
-  name = "vaquh/custom"
-  description = "Custom filter based on riktenx/filterscape"
-}
+meta { name = "vaquh/custom"; description = "Custom filter based on riktenx/filterscape"; }
+
 
 
 
@@ -156,7 +154,6 @@ rule (name:VAR_GENERAL_ITEMS6) { VAR_GENERAL_STYLE6 }
 
 
 
-
 /*@ define:module:hidejunk
 name: Junk filtering
 description: |
@@ -247,7 +244,7 @@ enum: [
   {"label":"dragon arrow","value":"dragon arrow*"}
 ]
 */
-#define VAR_JUNK_HIDE_AMMO_ARROWS ["bronze arrow","iron arrow","steel arrow","mithril arrow","adamant arrow","rune arrow","amethyst arrow","dragon arrow"]
+#define VAR_JUNK_HIDE_AMMO_ARROWS ["bronze arrow*","iron arrow*","steel arrow*","mithril arrow*","adamant arrow*","rune arrow*","amethyst arrow*","dragon arrow*"]
 apply (name:VAR_JUNK_HIDE_AMMO_ARROWS) { hidden = true; }
 
 /*@ define:input
@@ -275,7 +272,7 @@ enum: [
   {"label":"atlatl dart","value":"atlatl dart*"}
 ]
 */
-#define VAR_JUNK_HIDE_AMMO_DARTS ["bronze dart","iron dart","steel dart","mithril dart","adamant dart","rune dart","amethyst dart","dragon dart","atlatl dart"]
+#define VAR_JUNK_HIDE_AMMO_DARTS ["bronze dart*","iron dart*","steel dart*","mithril dart*","adamant dart*","rune dart*","amethyst dart*","dragon dart*","atlatl dart*"]
 apply (name:VAR_JUNK_HIDE_AMMO_DARTS) { hidden = true; }
 
 /*@ define:input
@@ -293,7 +290,7 @@ enum: [
   {"label":"dragon javelin","value":"dragon javelin*"}
 ]
 */
-#define VAR_JUNK_HIDE_AMMO_JAVELINS []
+#define VAR_JUNK_HIDE_AMMO_JAVELINS ["bronze javelin*","iron javelin*","steel javelin*","mithril javelin*","adamant javelin*","rune javelin*","amethyst javelin*","dragon javelin*"]
 apply (name:VAR_JUNK_HIDE_AMMO_JAVELINS) { hidden = true; }
 
 
@@ -391,7 +388,6 @@ label: 'Hide master uniques'
 apply (VAR_JUNK_HIDE_UNIQUE_CLUE_MASTER && name:CONST_JUNK_UNIQUE_CLUE_MASTER) { hidden = true; }
 
 
-
 /*@ define:input
 type: stringlist
 group: Misc
@@ -399,6 +395,7 @@ label: Hide these items
 */
 #define VAR_HIDES_HIDEBYDEFAULT ["Vial","Bucket","Jug","Beer glass","Vial of water","Bucket of water","Jug of water","Bones","Big bones","Ashes","Seaweed","Broken arrow"]
 apply (name:VAR_HIDES_HIDEBYDEFAULT) { hidden = true; }
+
 
 
 
@@ -411,9 +408,6 @@ description: |
   * this section is missing a mob you'd like to see
   * the filter isn't working for a specific mob
 */
-
-
-
 
 #define CONST_AREA_BLOODVELD0 [2845,5283,0,2935,5362,0] // [[God Wars Dungeon]]
 #define CONST_AREA_BLOODVELD1 [3588,9735,0,3600,9750,0] // [[Meiyerditch Laboratories]]
@@ -1462,8 +1456,6 @@ CONST_TORMENTEDDEMON_RULE (name:VAR_TORMENTEDDEMON_ENUMLIST_FILTER_OTHER) {
 
 
 
-
-
 /*@ define:module:wildy
 name: 'PvM: wildy'
 description: |
@@ -1637,8 +1629,6 @@ enum: ["slayer's enchantment","larran's key"]
 CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_WILDYSLAYERTERTIARY) {
     hidden = true;
 }
-
-
 
 
 
@@ -4752,7 +4742,6 @@ CONST_ALCHEMICALHYDRA_RULE (name:VAR_ALCHEMICALHYDRA_ENUMLIST_FILTER_TERTIARY) {
 
 
 
-
 /*@ define:module:cox
 ---
 name: CoX
@@ -4863,6 +4852,7 @@ rule (name:"smelling salts*") { VAR_TOA_SMS_STYLE }
 rule (name:"silk dressing*") { VAR_TOA_SLD_STYLE }
 rule (name:"blessed crystal scarab*") { VAR_TOA_BCS_STYLE }
 rule (name:"honey locust*") { VAR_TOA_HNL_STYLE }
+
 
 
 
@@ -5127,6 +5117,7 @@ rule (name:"Urium remains") { VAR_SOM_URIUM_STYLE }
 
 
 
+
 /*@ define:module:defender
 name: Defenders
 */
@@ -5150,7 +5141,6 @@ exampleItemId: 12954
 #define VAR_DEFENDER_EQUIP_DEFENDER_STYLE backgroundColor = "#80000000";showLootbeam = true;sound = 6765;icon = CurrentItem();
 
 rule (name:VAR_DEFENDER_EQUIP_DEFENDER_LIST) { hidden = false; VAR_DEFENDER_EQUIP_DEFENDER_STYLE }
-
 
 
 
@@ -5228,7 +5218,6 @@ rule (name:VAR_UNIQUE_CTIER) { VAR_UNIQUE_CTIER_CUSTOMSTYLE }
 
 
 
-
 /*@ define:module:potions
 ---
 name: Potions
@@ -5285,7 +5274,6 @@ CONST_POTION_HIGHLIGHT("sanfew serum*",         VAR_POTION_SANFEW_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*super combat potion*", VAR_POTION_SUPERCOMBAT_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*ranging potion*",      VAR_POTION_RANGE_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*bastion potion*",      VAR_POTION_BASTION_USERSTYLE)
-
 
 
 
@@ -5459,7 +5447,6 @@ rule (name:VAR_CLUE_BEGINNER_HIDE_LIST ||
 
 
 
-
 /*@ define:module:herbs
 ---
 name: Herbs
@@ -5541,7 +5528,6 @@ rule (noted:false && name:VAR_HERB_SHOW) { hidden = false; }
 rule (noted:false && name:VAR_HERB_HIDE) { hidden = true; }
 
 rule (noted:false && name:CONST_HERB_HERBS) {}
-
 
 
 
