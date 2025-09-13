@@ -8,6 +8,7 @@ meta { name = "vaquh/custom"; description = "Custom filter based on riktenx/filt
 
 
 
+
 /*@ define:module:general
 name: General options
 */
@@ -151,6 +152,7 @@ rule (name:VAR_HHGROUP_STRINGLIST_HIGHLIGHT3_ITEMS) { VAR_HHGROUP_STYLE_HIGHLIGH
 rule (name:VAR_HHGROUP_STRINGLIST_HIGHLIGHT4_ITEMS) { VAR_HHGROUP_STYLE_HIGHLIGHT4_STYLE }
 rule (name:VAR_GENERAL_ITEMS5) { VAR_GENERAL_STYLE5 }
 rule (name:VAR_GENERAL_ITEMS6) { VAR_GENERAL_STYLE6 }
+
 
 
 
@@ -397,6 +399,7 @@ label: Hide these items
 */
 #define VAR_HIDES_HIDEBYDEFAULT ["Vial","Bucket","Jug","Beer glass","Vial of water","Bucket of water","Jug of water","Bones","Big bones","Ashes","Seaweed","Broken arrow"]
 apply (name:VAR_HIDES_HIDEBYDEFAULT) { hidden = true; }
+
 
 
 
@@ -1460,6 +1463,7 @@ CONST_TORMENTEDDEMON_RULE (name:VAR_TORMENTEDDEMON_ENUMLIST_FILTER_OTHER) {
 
 
 
+
 /*@ define:module:wildy
 name: 'PvM: wildy'
 description: |
@@ -1633,6 +1637,7 @@ enum: ["slayer's enchantment","larran's key"]
 CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_WILDYSLAYERTERTIARY) {
     hidden = true;
 }
+
 
 
 
@@ -4748,6 +4753,7 @@ CONST_ALCHEMICALHYDRA_RULE (name:VAR_ALCHEMICALHYDRA_ENUMLIST_FILTER_TERTIARY) {
 
 
 
+
 /*@ define:module:cox
 ---
 name: CoX
@@ -4793,6 +4799,7 @@ rule (name:"revitalisation*") {
 rule (name:"xeric's aid*") {
   VAR_COX_XER_USERSTYLE
 }
+
 
 
 
@@ -4859,6 +4866,7 @@ rule (name:"smelling salts*") { VAR_TOA_SMS_STYLE }
 rule (name:"silk dressing*") { VAR_TOA_SLD_STYLE }
 rule (name:"blessed crystal scarab*") { VAR_TOA_BCS_STYLE }
 rule (name:"honey locust*") { VAR_TOA_HNL_STYLE }
+
 
 
 
@@ -5127,6 +5135,7 @@ rule (name:"Urium remains") { VAR_SOM_URIUM_STYLE }
 
 
 
+
 /*@ define:module:defender
 name: Defenders
 */
@@ -5150,6 +5159,7 @@ exampleItemId: 12954
 #define VAR_DEFENDER_EQUIP_DEFENDER_STYLE backgroundColor = "#80000000";showLootbeam = true;sound = 6765;icon = CurrentItem();
 
 rule (name:VAR_DEFENDER_EQUIP_DEFENDER_LIST) { hidden = false; VAR_DEFENDER_EQUIP_DEFENDER_STYLE }
+
 
 
 
@@ -5229,6 +5239,7 @@ rule (name:VAR_UNIQUE_CTIER) { VAR_UNIQUE_CTIER_CUSTOMSTYLE }
 
 
 
+
 /*@ define:module:potions
 ---
 name: Potions
@@ -5285,6 +5296,7 @@ CONST_POTION_HIGHLIGHT("sanfew serum*",         VAR_POTION_SANFEW_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*super combat potion*", VAR_POTION_SUPERCOMBAT_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*ranging potion*",      VAR_POTION_RANGE_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*bastion potion*",      VAR_POTION_BASTION_USERSTYLE)
+
 
 
 
@@ -5460,6 +5472,7 @@ rule (name:VAR_CLUE_BEGINNER_HIDE_LIST ||
 
 
 
+
 /*@ define:module:herbs
 ---
 name: Herbs
@@ -5546,6 +5559,7 @@ rule (noted:false && name:CONST_HERB_HERBS) {}
 
 
 
+
 /*@ define:module:currency_/_tokens
 ---
 name: Currency / Tokens
@@ -5566,6 +5580,7 @@ exampleItemId: 11849
 #define VAR_CURRENCY_USERSTYLE textColor = "#beb287";icon = CurrentItem();
 
 apply (name:VAR_CURRENCY_ITEMS) { VAR_CURRENCY_USERSTYLE }
+
 
 
 
