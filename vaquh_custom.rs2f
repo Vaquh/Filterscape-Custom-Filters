@@ -207,7 +207,7 @@ group: 'Equipment'
 label: 'Hide black equipment'
 */
 #define VAR_JUNK_HIDE_EQUIP_BLACK true
-#define CONST_JUNK_EQUIP_BLACK ["Black Battleaxe","Black cane","Black dagger","Black longsword","Black mace","Black scimitar","Black sword","Black warhammer","Black 2h sword","Black claws","Black halberd","Black spear","Black brutal","Black dart,"Black knife","Black chainbody","Black full helm","Black gloves","Black kiteshield","Black med helm","Black platebody","Black platelegs","Black plateskirt","Black sq shield"]
+#define CONST_JUNK_EQUIP_BLACK ["Black Battleaxe","Black cane","Black dagger","Black longsword","Black mace","Black scimitar","Black sword","Black warhammer","Black 2h sword","Black claws","Black halberd","Black spear","Black brutal","Black dart","Black knife","Black chainbody","Black full helm","Black gloves","Black kiteshield","Black med helm","Black platebody","Black platelegs","Black plateskirt","Black sq shield"]
 apply (VAR_JUNK_HIDE_EQUIP_BLACK && name:CONST_JUNK_EQUIP_BLACK) { hidden = true; }
 
 /*@ define:input
