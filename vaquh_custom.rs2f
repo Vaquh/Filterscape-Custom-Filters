@@ -5537,7 +5537,7 @@ enum: [
   {"label":"Torstol","value":"*torstol"}
 ]
 */
-#define VAR_HERB_HIDE ["*guam leaf","*marrentill","*tarromin","*harralander]
+#define VAR_HERB_HIDE ["*guam leaf","*marrentill","*tarromin","*harralander"]
 
 /*@ define:input:herbs
 type: style
