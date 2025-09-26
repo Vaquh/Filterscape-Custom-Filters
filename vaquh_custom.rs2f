@@ -5262,13 +5262,13 @@ name: Potions
 type: style
 label: Super restore
 */
-#define VAR_POTION_SUPERRESTORE_USERSTYLE hidden = false;textColor = "#e91e63ff";textAccent = 2;
+#define VAR_POTION_SUPERRESTORE_USERSTYLE hidden = false;textColor = "#e91e63";textAccent = 2;
 
 /*@ define:input:potions
 type: style
 label: Blighted super restore
 */
-#define VAR_POTION_RESTORE_USERSTYLE hidden = false;textColor = "#711f3e";textAccent = 2;
+#define VAR_POTION_BLIGHTEDRESTORE_USERSTYLE hidden = false;textColor = "#711f3e";textAccent = 2;
 
 /*@ define:input:potions
 type: style
@@ -5307,7 +5307,7 @@ label: Bastion potion
 #define VAR_POTION_BASTION_USERSTYLE hidden = false;textColor = "#db721c";textAccent = 2;
 
 CONST_POTION_HIGHLIGHT("super restore*",          VAR_POTION_SUPERRESTORE_USERSTYLE)
-CONST_POTION_HIGHLIGHT("blighted super restore*", VAR_POTION_SUPERRESTORE_USERSTYLE)
+CONST_POTION_HIGHLIGHT("blighted super restore*", VAR_POTION_BLIGHTEDRESTORE_USERSTYLE)
 CONST_POTION_HIGHLIGHT("saradomin brew*",         VAR_POTION_SARABREW_USERSTYLE)
 CONST_POTION_HIGHLIGHT("prayer potion*",          VAR_POTION_PRAYER_USERSTYLE)
 CONST_POTION_HIGHLIGHT("sanfew serum*",           VAR_POTION_SANFEW_USERSTYLE)
