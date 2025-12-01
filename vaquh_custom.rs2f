@@ -5356,7 +5356,7 @@ label: Beginner clue
 #define VAR_CLUE_BEGINNER_CUSTOMSTYLE \
   hidden = false; \
   textColor = "#ffffff"; \
-  menuTextColor = "#ffe0e0e0" \
+  menuTextColor = "#ffe0e0e0"; \
   backgroundColor = "#beb287"; \
   borderColor = "#ffffff";
 
@@ -5384,7 +5384,7 @@ label: Easy clue
 #define VAR_CLUE_EASY_CUSTOMSTYLE \
   hidden = false; \
   textColor = "#00ff00"; \
-  menuTextColor = "#29802d" \
+  menuTextColor = "#29802d"; \
   backgroundColor = "#beb287"; \
   borderColor = "#00ff00";
 
@@ -5412,7 +5412,7 @@ label: Medium clue
 #define VAR_CLUE_MEDIUM_CUSTOMSTYLE \
   hidden = false; \
   textColor = "#00ffff"; \
-  menuTextColor = "#569699" \
+  menuTextColor = "#569699"; \
   backgroundColor = "#beb287"; \
   borderColor = "#00ffff"; \
 
@@ -5440,7 +5440,7 @@ label: Hard clue
 #define VAR_CLUE_HARD_CUSTOMSTYLE \
   hidden = false; \
   textColor = "#ff00ff"; \
-  menuTextColor = "#833798" \
+  menuTextColor = "#833798"; \
   backgroundColor = "#beb287"; \
   borderColor = "#ff00ff";
 
@@ -5468,7 +5468,7 @@ label: Elite clue
 #define VAR_CLUE_ELITE_CUSTOMSTYLE \
   hidden = false; \
   textColor = "#ffff00"; \
-  menuTextColor = "#bda518" \
+  menuTextColor = "#bda518"; \
   backgroundColor = "#beb287"; \
   borderColor = "#ffff00";
 
@@ -5496,7 +5496,7 @@ label: Master clue
 #define VAR_CLUE_MASTER_CUSTOMSTYLE \
   hidden = false; \
   textColor = "#ff0000"; \
-  menuTextColor = "#9b3026" \
+  menuTextColor = "#9b3026"; \
   backgroundColor = "#beb287"; \
   borderColor = "#ff0000";
 
