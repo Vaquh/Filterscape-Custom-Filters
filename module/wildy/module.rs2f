@@ -1,0 +1,174 @@
+/*@ define:module:wildy
+name: 'PvM: wildy'
+description: |
+  Provides filtering for wildy mobs.
+*/
+
+#define CONST_AREA_CHAOSTEMPLE [3212,3586,0,3263,3636,0]
+#define CONST_ELDERCHAOSDRUID_RULE(_cond) rule (area:CONST_AREA_CHAOSTEMPLE && (_cond))
+#define CONST_ZOMBIEPIRATE_RULE(_cond) rule (area:CONST_AREA_CHAOSTEMPLE && (_cond))
+
+/*@ define:input
+type: boolean
+group: Elder Chaos druid
+label: Hide coin drops
+*/
+#define VAR_ELDERCHAOSDRUIDS_HIDECOINS true
+CONST_ELDERCHAOSDRUID_RULE (VAR_ELDERCHAOSDRUIDS_HIDECOINS && name:"coins" && quantity:<=250) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: 100%'
+group: Elder Chaos druid
+enum: ["bones"]
+*/
+#define VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_100 ["bones"]
+CONST_ELDERCHAOSDRUID_RULE (name:VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_100) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Zamorak robes'
+group: Elder Chaos druid
+enum: ["zamorak monk top","zamorak monk bottom","elder chaos hood","elder chaos robe", "elder chaos top"]
+*/
+#define VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_ZAMORAKROBES ["zamorak monk top","zamorak monk bottom"]
+CONST_ELDERCHAOSDRUID_RULE (name:VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_ZAMORAKROBES) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Runes and Ammunition'
+group: Elder Chaos druid
+enum: ["law rune","mithril bolts","air rune","body rune","chaos rune","earth rune","mind rune","nature rune"]
+*/
+#define VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_RUNESANDAMMUNITION ["mithril bolts","air rune","body rune","earth rune","mind rune","nature rune","law rune"]
+CONST_ELDERCHAOSDRUID_RULE (name:VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Herbs'
+group: Elder Chaos druid
+enum: ["grimy guam leaf","grimy marrentill","grimy tarromin","grimy harralander","grimy ranarr weed","grimy irit leaf","grimy avantoe","grimy kwuarm","grimy cadantine","grimy lantadyme","grimy dwarf weed"]
+*/
+#define VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_HERBS ["grimy guam leaf","grimy marrentill","grimy tarromin","grimy harralander"]
+CONST_ELDERCHAOSDRUID_RULE (name:VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_HERBS) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Other'
+group: Elder Chaos druid
+enum: ["Vial of water","steel longsword","dark fishing bait","snape grass","unholy mould"]
+*/
+#define VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_OTHER ["Vial of water","steel longsword","dark fishing bait","snape grass","unholy mould"]
+CONST_ELDERCHAOSDRUID_RULE (name:VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_OTHER) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Tertiary'
+group: Elder Chaos druid
+enum: ["Looting bag","Ensouled chaos druid head","clue scroll (hard)","scroll box (hard)"]
+*/
+#define VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_TERTIARY ["Ensouled chaos druid head"]
+CONST_ELDERCHAOSDRUID_RULE (name:VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_TERTIARY) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Wilderness Slayer Tertiary'
+group: Elder Chaos druid
+enum: ["Larran's key","Slayer's enchantment"]
+*/
+#define VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_WILDYSLAYERTERTIARY []
+CONST_ELDERCHAOSDRUID_RULE (name:VAR_ELDERCHAOSDRUID_ENUMLIST_FILTER_WILDYSLAYERTERTIARY) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: 100%'
+group: Zombie pirate
+enum: ["bones"]
+*/
+#define VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_100 ["bones"]
+CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_100) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Runes'
+group: Zombie pirate
+enum: ["blood rune","death rune","chaos rune","mind rune"]
+*/
+#define VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_RUNES ["mind rune"]
+CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_RUNES) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Weapons and Armour'
+group: Zombie pirate
+enum: ["battlestaff","adamant platebody","rune med helm","rune warhammer","rune battleaxe","rune longsword","rune sword","rune mace","dragon dagger","dragon longsword","dragon scimitar"]
+*/
+#define VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Blighted Supplies'
+group: Zombie pirate
+enum: ["blighted ancient ice sack","blighted anglerfish","blighted manta ray","blighted karambwan","blighted super restore(4)"]
+*/
+#define VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_BLIGHTEDSUPPLIES []
+CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_BLIGHTEDSUPPLIES) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Other'
+group: Zombie pirate
+enum: ["Zombie pirate key","coins","cannonball","gold ore","adamant seeds","teleport anchoring scroll"]
+*/
+#define VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_OTHER ["gold ore","adamant seeds"]
+CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_OTHER) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Tertiary'
+group: Zombie pirate
+enum: ["Looting bag","zombie champion scroll"]
+*/
+#define VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_TERTIARY []
+CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_TERTIARY) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Wilderness Slayer Tertiary'
+group: Zombie pirate
+enum: ["slayer's enchantment","larran's key"]
+*/
+#define VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_WILDYSLAYERTERTIARY []
+CONST_ZOMBIEPIRATE_RULE (name:VAR_ZOMBIEPIRATE_ENUMLIST_FILTER_WILDYSLAYERTERTIARY) {
+    hidden = true;
+}
+

@@ -1,0 +1,195 @@
+/*@ define:module:clues
+---
+name: Clues
+description: |
+  Styles apply to the following items:
+
+  * Clue scrolls
+  * Scroll boxes
+  * Challenge scrolls
+  * Reward caskets
+*/
+
+/*@ define:input:clues
+type: enumlist
+group: Beginner Tier
+label: Highlight Items
+enum: ["scroll box (beginner)", "clue scroll (beginner)", "reward casket (beginner)", "challenge scroll (beginner)"]
+*/
+#define VAR_CLUE_BEGINNER_HIGHLIGHT_LIST ["scroll box (beginner)","reward casket (beginner)"]
+
+/*@ define:input:clues
+type: enumlist
+group: Beginner Tier
+label: Hide Items
+enum: ["scroll box (beginner)", "clue scroll (beginner)", "reward casket (beginner)", "challenge scroll (beginner)"]
+*/
+#define VAR_CLUE_BEGINNER_HIDE_LIST ["clue scroll (beginner)","challenge scroll (beginner)"]
+
+/*@ define:input:clues
+type: style
+group: Beginner Tier
+label: Beginner clue
+*/
+#define VAR_CLUE_BEGINNER_CUSTOMSTYLE \
+  hidden = false; \
+  textColor = "#ffffff"; \
+  menuTextColor = "#ffe0e0e0"; \
+  backgroundColor = "#beb287"; \
+  borderColor = "#ffffff";
+
+/*@ define:input:clues
+type: enumlist
+group: Easy Tier
+label: Highlight Items
+enum: ["scroll box (easy)", "clue scroll (easy)", "reward casket (easy)", "challenge scroll (easy)"]
+*/
+#define VAR_CLUE_EASY_HIGHLIGHT_LIST ["scroll box (easy)","reward casket (easy)"]
+
+/*@ define:input:clues
+type: enumlist
+group: Easy Tier
+label: Hide Items
+enum: ["scroll box (easy)", "clue scroll (easy)", "reward casket (easy)", "challenge scroll (easy)"]
+*/
+#define VAR_CLUE_EASY_HIDE_LIST ["clue scroll (easy)","challenge scroll (easy)"]
+
+/*@ define:input:clues
+type: style
+group: Easy Tier
+label: Easy clue
+*/
+#define VAR_CLUE_EASY_CUSTOMSTYLE \
+  hidden = false; \
+  textColor = "#00ff00"; \
+  menuTextColor = "#29802d"; \
+  backgroundColor = "#beb287"; \
+  borderColor = "#00ff00";
+
+/*@ define:input:clues
+type: enumlist
+group: Medium Tier
+label: Highlight Items
+enum: ["scroll box (medium)", "clue scroll (medium)", "reward casket (medium)", "challenge scroll (medium)"]
+*/
+#define VAR_CLUE_MEDIUM_HIGHLIGHT_LIST ["scroll box (medium)","reward casket (medium)"]
+
+/*@ define:input:clues
+type: enumlist
+group: Medium Tier
+label: Hide Items
+enum: ["scroll box (medium)", "clue scroll (medium)", "reward casket (medium)", "challenge scroll (medium)"]
+*/
+#define VAR_CLUE_MEDIUM_HIDE_LIST ["clue scroll (medium)","challenge scroll (medium)"]
+
+/*@ define:input:clues
+type: style
+group: Medium Tier
+label: Medium clue
+*/
+#define VAR_CLUE_MEDIUM_CUSTOMSTYLE \
+  hidden = false; \
+  textColor = "#00ffff"; \
+  menuTextColor = "#569699"; \
+  backgroundColor = "#beb287"; \
+  borderColor = "#00ffff"; \
+
+/*@ define:input:clues
+type: enumlist
+group: Hard Tier
+label: Highlight Items
+enum: ["scroll box (hard)", "clue scroll (hard)", "reward casket (hard)", "challenge scroll (hard)"]
+*/
+#define VAR_CLUE_HARD_HIGHLIGHT_LIST ["scroll box (hard)","reward casket (hard)"]
+
+/*@ define:input:clues
+type: enumlist
+group: Hard Tier
+label: Hide Items
+enum: ["scroll box (hard)", "clue scroll (hard)", "reward casket (hard)", "challenge scroll (hard)"]
+*/
+#define VAR_CLUE_HARD_HIDE_LIST ["clue scroll (hard)","challenge scroll (hard)"]
+
+/*@ define:input:clues
+type: style
+group: Hard Tier
+label: Hard clue
+*/
+#define VAR_CLUE_HARD_CUSTOMSTYLE \
+  hidden = false; \
+  textColor = "#ff00ff"; \
+  menuTextColor = "#833798"; \
+  backgroundColor = "#beb287"; \
+  borderColor = "#ff00ff";
+
+/*@ define:input:clues
+type: enumlist
+group: Elite Tier
+label: Highlight Items
+enum: ["scroll box (elite)", "clue scroll (elite)", "reward casket (elite)", "challenge scroll (elite)"]
+*/
+#define VAR_CLUE_ELITE_HIGHLIGHT_LIST ["scroll box (elite)","reward casket (elite)"]
+
+/*@ define:input:clues
+type: enumlist
+group: Elite Tier
+label: Hide Items
+enum: ["scroll box (elite)", "clue scroll (elite)", "reward casket (elite)", "challenge scroll (elite)"]
+*/
+#define VAR_CLUE_ELITE_HIDE_LIST ["clue scroll (elite)","challenge scroll (elite)"]
+
+/*@ define:input:clues
+type: style
+group: Elite Tier
+label: Elite clue
+*/
+#define VAR_CLUE_ELITE_CUSTOMSTYLE \
+  hidden = false; \
+  textColor = "#ffff00"; \
+  menuTextColor = "#bda518"; \
+  backgroundColor = "#beb287"; \
+  borderColor = "#ffff00";
+
+/*@ define:input:clues
+type: enumlist
+group: Master Tier
+label: Items
+enum: ["scroll box (master)", "clue scroll (master)", "reward casket (master)", "challenge scroll (master)"]
+*/
+#define VAR_CLUE_MASTER_HIGHLIGHT_LIST ["scroll box (master)","reward casket (master)"]
+
+/*@ define:input:clues
+type: enumlist
+group: Master Tier
+label: Hide Items
+enum: ["scroll box (master)", "clue scroll (master)", "reward casket (master)", "challenge scroll (master)"]
+*/
+#define VAR_CLUE_MASTER_HIDE_LIST ["clue scroll (master)","challenge scroll (master)"]
+
+/*@ define:input:clues
+type: style
+group: Master Tier
+label: Master clue
+*/
+#define VAR_CLUE_MASTER_CUSTOMSTYLE \
+  hidden = false; \
+  textColor = "#ff0000"; \
+  menuTextColor = "#9b3026"; \
+  backgroundColor = "#beb287"; \
+  borderColor = "#ff0000";
+
+rule (name:VAR_CLUE_BEGINNER_HIGHLIGHT_LIST) {VAR_CLUE_BEGINNER_CUSTOMSTYLE}
+rule (name:VAR_CLUE_EASY_HIGHLIGHT_LIST) {VAR_CLUE_EASY_CUSTOMSTYLE}
+rule (name:VAR_CLUE_MEDIUM_HIGHLIGHT_LIST) {VAR_CLUE_MEDIUM_CUSTOMSTYLE}
+rule (name:VAR_CLUE_HARD_HIGHLIGHT_LIST) {VAR_CLUE_HARD_CUSTOMSTYLE}
+rule (name:VAR_CLUE_ELITE_HIGHLIGHT_LIST) {VAR_CLUE_ELITE_CUSTOMSTYLE}
+rule (name:VAR_CLUE_MASTER_HIGHLIGHT_LIST) {VAR_CLUE_MASTER_CUSTOMSTYLE}
+rule (name:VAR_CLUE_BEGINNER_HIDE_LIST ||
+      name:VAR_CLUE_EASY_HIDE_LIST ||
+      name:VAR_CLUE_MEDIUM_HIDE_LIST ||
+      name:VAR_CLUE_HARD_HIDE_LIST ||
+      name:VAR_CLUE_ELITE_HIDE_LIST ||
+      name:VAR_CLUE_MASTER_HIDE_LIST) {
+        hidden = true;
+      }
+
