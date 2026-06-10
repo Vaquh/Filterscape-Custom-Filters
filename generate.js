@@ -1,27 +1,52 @@
+function normalizeBlock(text) {
+  return text.replace(/\r\n/g, '\n')
+             .replace(/\r/g, '\n')
+             .replace(/^\n+/, '')
+             .replace(/\s+$/, '');
+}
+
+async function buildModule(dir) {
+  const files = [];
+
+  for await (const entry of Deno.readDir(dir)) {
+    if (entry.isFile && entry.name.endsWith('rs2f')) {
+      files.push(`${dir}/${entry.name}`);
+    }
+  }
+  
+  files.sort();
+
+  const module = await Promise.all(
+    files.map(async (f) => normalizeBlock(await Deno.readTextFile(f)))
+  );
+
+  return module.join('\n'.repeat(2));
+}
+
 const filterMeta = {
   type: 'filter',
   name: 'vaquh/custom',
   description: 'Custom filter based on riktenx/filterscape',
   modules: [
-    { modulePath: 'module/general/module.rs2f' },
-    { modulePath: 'module/junk/module.rs2f' },
-    { modulePath: 'module/slayer/module.rs2f' },
-    { modulePath: 'module/wildy/module.rs2f' },
-    { modulePath: 'module/boss/module.rs2f' },
-    { modulePath: 'module/cox/module.rs2f' },
-    { modulePath: 'module/toa/module.rs2f' },
-    { modulePath: 'module/shades/module.rs2f' },
-    { modulePath: 'module/defender/module.rs2f' },
-    { modulePath: 'module/unique/module.rs2f' },
-    { modulePath: 'module/potion/module.rs2f' },
-    { modulePath: 'module/clue/module.rs2f' },
-    { modulePath: 'module/herb/module.rs2f' },
-    { modulePath: 'module/currency/module.rs2f' },
-    { modulePath: 'module/value/module.rs2f' },
+    { moduleDir: 'module/general' },
+    { moduleDir: 'module/junk' },
+    { moduleDir: 'module/slayer' },
+    { moduleDir: 'module/wildy' },
+    { moduleDir: 'module/boss' },
+    { moduleDir: 'module/cox' },
+    { moduleDir: 'module/toa' },
+    { moduleDir: 'module/shades' },
+    { moduleDir: 'module/defender' },
+    { moduleDir: 'module/unique' },
+    { moduleDir: 'module/potion' },
+    { moduleDir: 'module/clue' },
+    { moduleDir: 'module/herb' },
+    { moduleDir: 'module/currency' },
+    { moduleDir: 'module/value' },
   ],
 };
 
-const filterHeader = `
+const filterHeader = normalizeBlock(`
 /*@ define:module:header
 hidden: true
 name: header
@@ -30,23 +55,23 @@ meta {
   name = "${filterMeta.name}";
   description = "${filterMeta.description}";
 }
-`;
+`);
 
-function normalizeBlock(text) {
-  return text.replace(/\r\n/g, '\n')
-             .replace(/\r/g, '\n')
-             .replace(/^\n+/, '')
-             .replace(/\s+$/, '');
-}
+const filterBody = (await Promise.all(
+  filterMeta.modules.map((m) => buildModule(m.moduleDir))
+)).join('\n'.repeat(4));
 
-const assembledFilter = [
-  normalizeBlock(filterHeader),
-  filterMeta.modules.map((module) => {
-    return normalizeBlock(Deno.readTextFileSync(module.modulePath));
-  })
-    .join('\n'.repeat(4)),
-]
-  .join('\n'.repeat(6))
-  + '\n'.repeat(2);
+const filterFooter = normalizeBlock(`
+`);
+
+const filterSections = [
+  filterHeader,
+  filterBody,
+  filterFooter,
+].filter(section => section.trim().length > 0);
+
+const assembledFilter = filterSections.join('\n'.repeat(6))
+                                      + '\n'.repeat(1);
 
 Deno.writeTextFileSync('vaquh_custom.rs2f', assembledFilter);
+

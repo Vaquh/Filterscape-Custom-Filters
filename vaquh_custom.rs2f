@@ -1995,12 +1995,23 @@ const_dagannothkings_rule (name:var_dagannothkings_enumlist_filter_runes) {
 
 /*@ define:input
 type: enumlist
+label: 'hide drops talismans (unnoted)'
+group: dagannoth kinds
+enum: ["air talisman","body talisman","earth talisman","fire talisman","mind talisman","water talisman","cosmic talisman","chaos talisman","nature talisman"]
+*/
+#define var_dagannothkings_enumlist_filter_talismansunnoted ["air talisman","body talisman","earth talisman","fire talisman","mind talisman","water talisman","cosmic talisman","chaos talisman","nature talisman"]
+const_dagannothkings_rule (name:var_dagannothkings_enumlist_filter_talismansunnoted && noted:false) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
 label: 'hide drops: talismans (noted)'
 group: dagannoth kings
 enum: ["earth talisman","air talisman","water talisman"]
 */
 #define var_dagannothkings_enumlist_filter_talismansnoted []
-const_dagannothkings_rule (name:var_dagannothkings_enumlist_filter_talismansnoted) {
+const_dagannothkings_rule (name:var_dagannothkings_enumlist_filter_talismansnoted && noted:true) {
   hidden = true;
 }
 
@@ -2014,7 +2025,6 @@ enum: ["steel arrow","runite bolts","iron arrow"]
 const_dagannothkings_rule (name:var_dagannothkings_enumlist_filter_ammunition) {
   hidden = true;
 }
-
 
 #define const_area_sarachnis [1829,9890,0,1855,9911,0]
 #define const_sarachnis_rule(_cond) rule (area:const_area_sarachnis && (_cond))
@@ -2361,7 +2371,6 @@ const_commanderzilyana_rule (name:var_commanderzilyana_enumlist_filter_foodandam
   hidden = true;
 }
 
-
 /*@ define:input
 type: boolean
 group: "general graardor"
@@ -2371,7 +2380,6 @@ label: hide coin drops from bodyguards
 const_generalgraardor_rule (var_generalgraardor_bghidecoins && name:"coins" && quantity:<=3000) {
   hidden = true;
 }
-
 
 #define const_area_generalgraardor [2863,5350,2,2877,5370,2]
 #define const_generalgraardor_rule(_cond) rule (area:const_area_generalgraardor && (_cond))
@@ -2431,17 +2439,15 @@ const_generalgraardor_rule (name:var_generalgraardor_enumlist_filter_foodandammu
   hidden = true;
 }
 
-
 /*@ define:input
 type: boolean
 group: "k'ril tsutsaroth"
 label: hide coin drops from bodyguards
 */
-#define var_kriltsutsaroth_bghidecoins true
+#define var_kriltsutsaroth_bghidecoins false
 const_kriltsutsaroth_rule (var_kriltsutsaroth_bghidecoins && name:"coins" && quantity:<=3000) {
   hidden = true;
 }
-
 
 #define const_area_kriltsutsaroth [2917,5317,2,2937,5332,2]
 #define const_kriltsutsaroth_rule(_cond) rule (area:const_area_kriltsutsaroth && (_cond))
@@ -2452,7 +2458,7 @@ label: 'hide drops: 100%'
 group: k'ril tsutsaroth
 enum: ["infernal ashes","frozen key piece (zamorak)","malicious ashes"]
 */
-#define var_kriltsutsaroth_enumlist_filter_100 []
+#define var_kriltsutsaroth_enumlist_filter_100 ["infernal ashes","malicious ashes"]
 const_kriltsutsaroth_rule (name:var_kriltsutsaroth_enumlist_filter_100) {
   hidden = true;
 }
@@ -2463,7 +2469,7 @@ label: 'hide drops: weapons and armour'
 group: k'ril tsutsaroth
 enum: ["adamant arrow(p++)","rune scimitar","adamant platebody","rune platelegs","dragon dagger(p++)"]
 */
-#define var_kriltsutsaroth_enumlist_filter_weaponsandarmour []
+#define var_kriltsutsaroth_enumlist_filter_weaponsandarmour ["adamant platebody","dragon dagger(p++)"]
 const_kriltsutsaroth_rule (name:var_kriltsutsaroth_enumlist_filter_weaponsandarmour) {
   hidden = true;
 }
@@ -2474,7 +2480,7 @@ label: 'hide drops: potions'
 group: k'ril tsutsaroth
 enum: ["super attack(3)","super strength(3)","super restore(3)","zamorak brew(3)"]
 */
-#define var_kriltsutsaroth_enumlist_filter_potions []
+#define var_kriltsutsaroth_enumlist_filter_potions ["super attack(3)","super strength(3)","zamorak brew(3)"]
 const_kriltsutsaroth_rule (name:var_kriltsutsaroth_enumlist_filter_potions) {
   hidden = true;
 }
@@ -2485,7 +2491,7 @@ label: 'hide drops: other'
 group: k'ril tsutsaroth
 enum: ["coins","grimy lantadyme","lantadyme seed","death rune","blood rune","shark","tuna potato","wine of zamorak","super attack(3)","super strength(3)"]
 */
-#define var_kriltsutsaroth_enumlist_filter_other []
+#define var_kriltsutsaroth_enumlist_filter_other ["lantadyme seed","shark","tuna potato","super attack(3)","super strength(3)"]
 const_kriltsutsaroth_rule (name:var_kriltsutsaroth_enumlist_filter_other) {
   hidden = true;
 }
@@ -2507,7 +2513,7 @@ label: 'hide drops: runes and ammunition'
 group: k'ril tsutsaroth
 enum: ["steel arrow","steel dart","death rune","blood rune"]
 */
-#define var_kriltsutsaroth_enumlist_filter_runesandammunition []
+#define var_kriltsutsaroth_enumlist_filter_runesandammunition ["steel arrow","steel dart"]
 const_kriltsutsaroth_rule (name:var_kriltsutsaroth_enumlist_filter_runesandammunition) {
   hidden = true;
 }
@@ -3609,6 +3615,8 @@ const_zulrah_rule (name:var_zulrah_enumlist_filter_tertiary) {
   hidden = true;
 }
 
+#define const_area_vorkath [2256,4051,0,2288,4080,0]
+#define const_vorkath_rule(_cond) rule (area:const_area_vorkath && (_cond))
 
 /*@ define:input:vorkath
 type: boolean
@@ -3616,6 +3624,9 @@ group: vorkath
 label: hide un-noted blue d-hide
 */
 #define var_vorkath_boolean_general_nohide true
+const_vorkath_rule (var_vorkath_boolean_general_nohide && name:"blue dragonhide" && noted:false) {
+  hidden = true;
+}
 
 /*@ define:input:vorkath
 type: boolean
@@ -3623,16 +3634,9 @@ group: vorkath
 label: hide superior dragon bones (why?)
 */
 #define var_vorkath_boolean_general_nobone false
-
-const_vorkath_rule (var_vorkath_boolean_general_nohide && name:"blue dragonhide" && noted:false) {
+const_vorkath_rule (var_vorkath_boolean_general_nobone && name:"superior dragon bones") {
   hidden = true;
 }
-const_vorkath_rule (var_vorkath_boolean_general_nobone && name:"superior dragon bones" && noted:false) {
-  hidden = true;
-}
-
-#define const_area_vorkath [2256,4051,0,2288,4080,0]
-#define const_vorkath_rule(_cond) rule (area:const_area_vorkath && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -5724,4 +5728,3 @@ rule (gevalue:>=VAR_VALUE_T0_VALUE) { VAR_VALUE_T0_CUSTOMSTYLE }
 rule ((tradeable:true || !VAR_VALUE_SHOWUNTRADEABLE) && value:<VAR_VALUE_MINVALUE) {
   hidden = true;
 }
-
