@@ -883,7 +883,7 @@ label: 'Hide drops: 100%'
 group: Demonic gorilla
 enum: ["Malicious ashes"]
 */
-#define VAR_DEMONICGORILLA_ENUMLIST_FILTER_100 []
+#define VAR_DEMONICGORILLA_ENUMLIST_FILTER_100 ["Malicious ashes"]
 CONST_DEMONICGORILLA_RULE (name:VAR_DEMONICGORILLA_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -938,7 +938,7 @@ label: 'Hide drops: Other'
 group: Demonic gorilla
 enum: ["Prayer potion(3)","Shark","Coins","Saradomin brew(2)","Adamantite bar","Javelin shaft","Rune javelin heads","Dragon javelin heads","Diamond","Runite bar"]
 */
-#define VAR_DEMONICGORILLA_ENUMLIST_FILTER_OTHER []
+#define VAR_DEMONICGORILLA_ENUMLIST_FILTER_OTHER ["Javelin shaft"]
 CONST_DEMONICGORILLA_RULE (name:VAR_DEMONICGORILLA_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
