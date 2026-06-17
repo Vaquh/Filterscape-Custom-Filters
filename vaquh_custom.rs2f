@@ -4275,13 +4275,22 @@ const_grotesqueguardians_rule (name:var_grotesqueguardians_enumlist_filter_terti
 #define const_area_abyssalsire [2944,4736,0,3135,4863,0]
 #define const_abyssalsire_rule(_cond) rule (area:const_area_abyssalsire && (_cond))
 
+/* define:input
+type: enumlist
+label: 'hide drops: pre-roll'
+group: abyssal sire
+enum: ["unsired"]
+*/
+#define var_abyssalsire_enumlist_filter_preroll []
+const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_preroll)
+
 /*@ define:input
 type: enumlist
 label: 'hide drops: 100%'
 group: abyssal sire
 enum: ["abyssal ashes"]
 */
-#define var_abyssalsire_enumlist_filter_100 []
+#define var_abyssalsire_enumlist_filter_100 ["abyssal ashes"]
 const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_100) {
   hidden = true;
 }
@@ -4321,12 +4330,34 @@ const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_herbs) {
 
 /*@ define:input
 type: enumlist
+label: 'hide drops: seeds'
+group: abyssal sire
+enum: ["ranarr seed","snapdragon seed","torstol seed","watermelon seed","willow seed","mahogany seed","maple seed","teak seed","yew seed","papaya tree seed","magic seed","palm tree seed","spirit seed","dragonfruit seed","celastrus seed","redwood tree seed"]
+*/
+#define var_abyssalsire_enumlist_filter_seeds ["watermelon seed","willow seed","mahogany seed","maple seed","teak seed","papaya tree seed"]
+const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_seeds) {
+    hidden = true;
+}
+
+/*@ define:input
+type: enumlist
 label: 'hide drops: materials'
 group: abyssal sire
-enum: ["coal","earth orb","pure essence","magic logs","uncut diamond","runite ore","onyx bolt tips","runite bar"]
+enum: ["coal","earth orb","pure essence","magic logs","uncut diamond","runite ore","onyx bolt tips","runite bar","aether catalyst"]
 */
-#define var_abyssalsire_enumlist_filter_materials []
+#define var_abyssalsire_enumlist_filter_materials ["pure essence"]
 const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_materials) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'hide drops: talismans'
+group: abyssal sire
+enum: ["air talisman","body talisman","earth talisman","fire talisman","mind talisman","water talisman","cosmic talisman","chaos talisman","nature talisman"]
+*/
+#define var_abyssalsire_enumlist_filter_talismans ["air talisman","body talisman","earth talisman","fire talisman","mind talisman","water talisman","cosmic talisman","chaos talisman","nature talisman"]
+const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_talismans) {
   hidden = true;
 }
 
@@ -4334,9 +4365,9 @@ const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_materials) {
 type: enumlist
 label: 'hide drops: other'
 group: abyssal sire
-enum: ["coins","chilli potato","super restore(4)","binding necklace","saradomin brew(3)","jug of water","unsired"]
+enum: ["coins","chilli potato","super restore(4)","binding necklace","saradomin brew(3)","jug of water"]
 */
-#define var_abyssalsire_enumlist_filter_other []
+#define var_abyssalsire_enumlist_filter_other ["jug of water"]
 const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_other) {
   hidden = true;
 }
