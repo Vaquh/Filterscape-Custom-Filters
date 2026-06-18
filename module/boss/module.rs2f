@@ -2989,7 +2989,7 @@ label: 'hide drops: 100%'
 group: thermonuclear smoke devil
 enum: ["ashes"]
 */
-#define var_thermonuclearsmokedevil_enumlist_filter_100 []
+#define var_thermonuclearsmokedevil_enumlist_filter_100 ["ashes"]
 const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_filter_100) {
   hidden = true;
 }
@@ -3000,7 +3000,7 @@ label: 'hide drops: weapons and armour'
 group: thermonuclear smoke devil
 enum: ["rune dagger","rune chainbody","red d'hide body","rune battleaxe","mystic air staff","mystic fire staff","rune scimitar","rune knife(p++)","dragon scimitar","ancient staff","occult necklace","smoke battlestaff","dragon chainbody"]
 */
-#define var_thermonuclearsmokedevil_enumlist_filter_weaponsandarmour []
+#define var_thermonuclearsmokedevil_enumlist_filter_weaponsandarmour ["rune dagger","red d'hide body"]
 const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_filter_weaponsandarmour) {
   hidden = true;
 }
@@ -3020,9 +3020,9 @@ const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_fi
 type: enumlist
 label: 'hide drops: consumables'
 group: thermonuclear smoke devil
-enum: ["ugthanki kebab","tuna potato","sanfew serum(4)","prayer potion(4)"]
+enum: ["tuna potato","sanfew serum(4)","ugthanki kebab","prayer potion(4)"]
 */
-#define var_thermonuclearsmokedevil_enumlist_filter_consumables []
+#define var_thermonuclearsmokedevil_enumlist_filter_consumables ["tuna potato","ugthanki kebab"]
 const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_filter_consumables) {
   hidden = true;
 }
@@ -3031,9 +3031,9 @@ const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_fi
 type: enumlist
 label: 'hide drops: resources'
 group: thermonuclear smoke devil
-enum: ["pure essence","molten glass","mithril bar","coal","magic logs","gold ore","diamond"]
+enum: ["pure essence","molten glass","mithril bar","magic logs","gold ore","diamond","raw shark","shark lure"]
 */
-#define var_thermonuclearsmokedevil_enumlist_filter_resources []
+#define var_thermonuclearsmokedevil_enumlist_filter_resources ["pure essence"]
 const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_filter_resources) {
   hidden = true;
 }
@@ -3042,9 +3042,9 @@ const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_fi
 type: enumlist
 label: 'hide drops: other'
 group: thermonuclear smoke devil
-enum: ["coins","tinderbox","fire talisman","bullseye lantern","desert goat horn","grimy toadflax","onyx bolt tips","snapdragon seed","grapes","magic seed","dragonstone ring","crystal key"]
+enum: ["coins","desert goat horn","grimy toadflax","onyx bolt tips","snapdragon seed","ranarr seed","tinderbox","fire talisman","grapes","magic seed","dragonstone ring","crystal key"]
 */
-#define var_thermonuclearsmokedevil_enumlist_filter_other []
+#define var_thermonuclearsmokedevil_enumlist_filter_other ["desert goat horn","tinderbox","fire talisman"]
 const_thermonuclearsmokedevil_rule (name:var_thermonuclearsmokedevil_enumlist_filter_other) {
   hidden = true;
 }
