@@ -4282,7 +4282,9 @@ group: abyssal sire
 enum: ["unsired"]
 */
 #define var_abyssalsire_enumlist_filter_preroll []
-const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_preroll)
+const_abyssalsire_rule (name:var_abyssalsire_enumlist_filter_preroll) {
+  hidden = true;
+}
 
 /*@ define:input
 type: enumlist
