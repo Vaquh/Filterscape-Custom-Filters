@@ -6,6 +6,24 @@ description: |
   not all of them have defaults yet, they're being added over time.
 */
 
+/*
+#define const_area_maggot_king []
+#define const_maggot_king_rule(_cond) rule (area:const_area_maggot_king && (_cond))
+*/
+
+/*@ define:input
+  type: enumlist
+  label: 'hide drops: unique'
+  group: maggot king
+  enum: []
+*/
+/*
+#define var_maggot_king_enumlist_filter_unique []
+const_maggot_king_rule (name:var_maggot_king_enumlist_filter_unique) {
+  hidden = true;
+}
+*/
+
 #define const_area_yama [1472,10048,0,1535,10111,0]
 #define const_yama_rule(_cond) rule (area:const_area_yama && (_cond))
 

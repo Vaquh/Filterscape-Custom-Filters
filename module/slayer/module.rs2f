@@ -94,7 +94,7 @@ label: Hide non-10k coin drops
 */
 #define VAR_KURASK_BOOLEAN_HIDESMALLCOINS true
 CONST_KURASK_RULE (VAR_KURASK_BOOLEAN_HIDESMALLCOINS && name:"Coins" && value:<10000) {
-  hidden = true;
+  hidden = false;
 }
 
 #define CONST_AREA_KURASK0 [2694,9992,0,2701,10001,0] // [[Fremennik Slayer Dungeon]] {{Fairycode|AJR}}
@@ -139,9 +139,20 @@ CONST_KURASK_RULE (name:VAR_KURASK_ENUMLIST_FILTER_RUNES) {
 type: enumlist
 label: 'Hide drops: Seeds'
 group: Kurask
-enum: ["Limpwurt seed"]
+enum: []
 */
-#define VAR_KURASK_ENUMLIST_FILTER_SEEDS []
+#define VAR_KURASK_ENUMLIST_FILTER_HERBS []
+CONST_KURASK_RULE (name:VAR_KURASK_ENUMLIST_FILTER_RUNES) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Seeds'
+group: Kurask
+enum: ["Limpwurt seed","Toadflax seed","Irit seed","Belladonna seed","Poison ivy seed","Avantoe seed","Cactus seed","Potato cactus seed","Kwuarm seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Snape grass seed","Dwarf weed seed","Torstol seed"]
+*/
+#define VAR_KURASK_ENUMLIST_FILTER_SEEDS ["Limpwurt seed","Toadflax seed","Irit seed","Belladonna seed","Poison ivy seed","Avantoe seed","Cactus seed","Potato cactus seed","Kwuarm seed","Cadantine seed","Lantadyme seed","Dwarf weed seed"]
 CONST_KURASK_RULE (name:VAR_KURASK_ENUMLIST_FILTER_SEEDS) {
   hidden = true;
 }

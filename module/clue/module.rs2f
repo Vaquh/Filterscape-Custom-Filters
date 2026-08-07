@@ -16,7 +16,7 @@ group: Beginner Tier
 label: Highlight Items
 enum: ["scroll box (beginner)", "clue scroll (beginner)", "reward casket (beginner)", "challenge scroll (beginner)"]
 */
-#define VAR_CLUE_BEGINNER_HIGHLIGHT_LIST ["scroll box (beginner)","reward casket (beginner)"]
+#define VAR_CLUE_BEGINNER_HIGHLIGHT_LIST ["reward casket (beginner)"]
 
 /*@ define:input:clues
 type: enumlist
@@ -24,7 +24,7 @@ group: Beginner Tier
 label: Hide Items
 enum: ["scroll box (beginner)", "clue scroll (beginner)", "reward casket (beginner)", "challenge scroll (beginner)"]
 */
-#define VAR_CLUE_BEGINNER_HIDE_LIST ["clue scroll (beginner)","challenge scroll (beginner)"]
+#define VAR_CLUE_BEGINNER_HIDE_LIST ["scroll box (beginner)","clue scroll (beginner)","challenge scroll (beginner)"]
 
 /*@ define:input:clues
 type: style

@@ -74,4 +74,3 @@ const assembledFilter = filterSections.join('\n'.repeat(6))
                                       + '\n'.repeat(1);
 
 Deno.writeTextFileSync('vaquh_custom.rs2f', assembledFilter);
-
