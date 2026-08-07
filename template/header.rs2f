@@ -1,0 +1,8 @@
+/*@ define:module:header
+  hidden: true
+  name: header
+*/
+meta {
+  name = "{name}";
+  description = "{description}";
+}

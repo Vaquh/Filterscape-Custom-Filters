@@ -1,0 +1,23 @@
+{
+  "type": "filter",
+  "name": "vaquh/custom",
+  "author": "vaquh",
+  "description": "Custom filter based on riktenx/filterscape",
+  "modules": [
+    "general",
+    "junk",
+    "slayer",
+    "wildy",
+    "boss",
+    "cox",
+    "toa",
+    "shades",
+    "defender",
+    "unique",
+    "potion",
+    "clue",
+    "herb",
+    "currency",
+    "value"
+  ]
+}
