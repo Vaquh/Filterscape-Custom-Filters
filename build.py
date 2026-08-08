@@ -1,3 +1,4 @@
+import argparse
 import json
 from pathlib import Path
 from typing import cast
@@ -12,10 +13,23 @@ def load_filter_metadata() -> FilterMetadata:
     return cast(FilterMetadata, json.loads(FILTER_PATH.read_text(encoding="utf-8")))
 
 def main():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("inputs", nargs="*")
+    parser.add_argument("-o", "--output")
+
+    args = parser.parse_args()
+
     metadata: FilterMetadata = load_filter_metadata()
 
+    module_list: list[str] = []
+    if args.inputs:
+        module_list = args.inputs
+    else:
+        module_list = metadata["modules"]
+
     modules: list[Path] = []
-    for module in metadata["modules"]:
+    for module in module_list:
         module_path: Path = MODULE_DIR / module
         if module_path.is_dir():
             modules.append(module_path)
@@ -27,7 +41,13 @@ def main():
     filter = join_non_empty([header, body, footer], "\n\n\n\n\n\n")
     filter += "\n"
 
-    _ = Path("vaquh_custom.rs2f").write_text(filter, encoding="utf-8", newline="\n")
+    output_path: Path
+    if args.output:
+        output_path = Path(args.output)
+    else:
+        output_path = Path("vaquh_custom.rs2f")
+
+    output_path.write_text(filter, encoding="utf-8", newline="\n")
 
 if __name__ == "__main__":
     main()
