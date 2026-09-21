@@ -584,6 +584,10 @@ CONST_SKELETALWYVERN_RULE (name:VAR_SKELETALWYVERN_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
+#define CONST_AREA_GARGOYLE0 [3430,3554,2,3452,3531,2] // [[Slayer Tower]] top floor
+#define CONST_AREA_GARGOYLE1 [3427,9927,3,3447,9952,3] // [[Slayer Tower]] basement (Slayer task only)
+#define CONST_GARGOYLE_RULE(_cond) rule ((area:CONST_AREA_GARGOYLE0 ||   area:CONST_AREA_GARGOYLE1) && (_cond))
+
 /*@ define:input
 type: boolean
 group: Gargoyle
@@ -593,11 +597,6 @@ label: Hide non-10k coin drops
 CONST_GARGOYLE_RULE (VAR_GARGOYLE_BOOLEAN_HIDESMALLCOINS && name:"Coins" && value:<10000) {
   hidden = true;
 }
-
-
-#define CONST_AREA_GARGOYLE0 [3430,3554,2,3452,3531,2] // [[Slayer Tower]] top floor
-#define CONST_AREA_GARGOYLE1 [3427,9928,3,3444,9948,3] // [[Slayer Tower]] basement (Slayer task only)
-#define CONST_GARGOYLE_RULE(_cond) rule ((area:CONST_AREA_GARGOYLE0 ||   area:CONST_AREA_GARGOYLE1) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -782,8 +781,30 @@ label: 'Hide drops: Runes'
 group: Araxyte
 enum: ["Air rune","Water rune","Earth rune","Fire rune","Cosmic rune","Chaos rune","Nature rune","Death rune","Law rune","Blood rune","Soul rune"]
 */
-#define VAR_ARAXYTE_ENUMLIST_FILTER_RUNES []
+#define VAR_ARAXYTE_ENUMLIST_FILTER_RUNES ["Air rune","Water rune","Earth rune","Cosmic rune","Chaos rune"]
 CONST_ARAXYTE_RULE (name:VAR_ARAXYTE_ENUMLIST_FILTER_RUNES) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Herbs'
+group: Araxyte
+enum: ["Grimy guam leaf","Grimy marrentill","Grimy tarromin","Grimy harralander","Grimy ranarr weed","Grimy irit leaf","Grimy avantoe","Grimy kwuarm","Grimy cadantine","Grimy lantadyme","Grimy dwarf weed"]
+*/
+#define VAR_ARAXYTE_ENUMLIST_FILTER_HERBS ["Grimy guam leaf","Grimy marrentill","Grimy tarromin","Grimy harralander","Grimy ranarr weed","Grimy irit leaf","Grimy avantoe","Grimy kwuarm","Grimy cadantine","Grimy lantadyme","Grimy dwarf weed"]
+CONST_ARAXYTE_RULE (name:VAR_ARAXYTE_ENUMLIST_FILTER_HERBS) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide drops: Seeds'
+group: Araxyte
+enum: ["Limpwurt seed","Strawberry seed","Marrentill seed","Jangerberry seed","Tarromin seed","Wildblood seed","Watermelon seed","Harralander seed","Snape grass seed","Ranarr seed","Whiteberry seed","Mushroom spore","Toadflax seed","Belladonna seed","Irit seed","Poison ivy seed","Avantoe seed","Cactus seed","Kwuarm seed","Potato cactus seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed"]
+*/
+#define VAR_ARAXYTE_ENUMLIST_FILTER_SEEDS ["Limpwurt seed","Strawberry seed","Marrentill seed","Jangerberry seed","Tarromin seed","Wildblood seed","Watermelon seed","Harralander seed","Whiteberry seed","Mushroom spore","Toadflax seed","Belladonna seed","Irit seed","Poison ivy seed","Avantoe seed","Cactus seed","Kwuarm seed","Potato cactus seed","Cadantine seed","Lantadyme seed","Dwarf weed seed"]
+CONST_ARAXYTE_RULE (name:VAR_ARAXYTE_ENUMLIST_FILTER_SEEDS) {
   hidden = true;
 }
 

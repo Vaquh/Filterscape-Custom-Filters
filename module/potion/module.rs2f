@@ -53,6 +53,18 @@ label: Bastion potion
 */
 #define VAR_POTION_BASTION_USERSTYLE hidden = false;textColor = "#db721c";textAccent = 2;
 
+/*@ define:input:potions
+  type: style
+  label: Stamina potion
+*/
+#define VAR_POTION_STAMINA_USERSTYLE hidden = false;textColor = "#997240";textAccent = 2;
+
+/*@ define:input:potions
+  type: style
+  label: Surge potion
+*/
+#define VAR_POTION_SURGE_USERSTYLE hidden = false;textColor = "#507783";textAccent = 2;
+
 CONST_POTION_HIGHLIGHT("super restore*",          VAR_POTION_SUPERRESTORE_USERSTYLE)
 CONST_POTION_HIGHLIGHT("blighted super restore*", VAR_POTION_BLIGHTEDRESTORE_USERSTYLE)
 CONST_POTION_HIGHLIGHT("saradomin brew*",         VAR_POTION_SARABREW_USERSTYLE)
@@ -61,4 +73,6 @@ CONST_POTION_HIGHLIGHT("sanfew serum*",           VAR_POTION_SANFEW_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*super combat potion*",   VAR_POTION_SUPERCOMBAT_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*ranging potion*",        VAR_POTION_RANGING_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*bastion potion*",        VAR_POTION_BASTION_USERSTYLE)
+CONST_POTION_HIGHLIGHT("*stamina potion*",        VAR_POTION_STAMINA_USERSTYLE)
+CONST_POTION_HIGHLIGHT("*surge potion*",          VAR_POTION_SURGE_USERSTYLE)
 
