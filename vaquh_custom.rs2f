@@ -5381,6 +5381,12 @@ label: Bastion potion
 
 /*@ define:input:potions
   type: style
+  label: Armadyl brew
+*/
+#define VAR_POTION_ARMABREW_USERSTYLE hidden = false;textColor = "#8ed6ff";textAccent = 2;
+
+/*@ define:input:potions
+  type: style
   label: Stamina potion
 */
 #define VAR_POTION_STAMINA_USERSTYLE hidden = false;textColor = "#997240";textAccent = 2;
@@ -5399,6 +5405,7 @@ CONST_POTION_HIGHLIGHT("sanfew serum*",           VAR_POTION_SANFEW_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*super combat potion*",   VAR_POTION_SUPERCOMBAT_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*ranging potion*",        VAR_POTION_RANGING_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*bastion potion*",        VAR_POTION_BASTION_USERSTYLE)
+CONST_POTION_HIGHLIGHT("armadyl brew*",           VAR_POTION_ARMABREW_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*stamina potion*",        VAR_POTION_STAMINA_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*surge potion*",          VAR_POTION_SURGE_USERSTYLE)
 
