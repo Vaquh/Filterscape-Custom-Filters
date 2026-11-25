@@ -1833,7 +1833,7 @@ label: 'hide drops: 100%'
 group: giant mole
 enum: ["big bones","mole claw","mole skin"]
 */
-#define VAR_GIANTMOLE_ENUMLIST_FILTER_100 []
+#define VAR_GIANTMOLE_ENUMLIST_FILTER_100 [ "big bones" ]
 CONST_GIANTMOLE_RULE (name:VAR_GIANTMOLE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1844,7 +1844,7 @@ label: 'hide drops: weapons and armour'
 group: giant mole
 enum: ["adamant longsword","mithril platebody","amulet of strength","mithril axe","mithril battleaxe","rune med helm"]
 */
-#define VAR_GIANTMOLE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_GIANTMOLE_ENUMLIST_FILTER_WEAPONSANDARMOUR [ "adamant longsword","mithril platebody","amulet of strength","mithril axe","mithril battleaxe" ]
 CONST_GIANTMOLE_RULE (name:VAR_GIANTMOLE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1855,7 +1855,7 @@ label: 'hide drops: runes and ammunition'
 group: giant mole
 enum: ["air rune","blood rune","fire rune","iron arrow","law rune","death rune"]
 */
-#define VAR_GIANTMOLE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_GIANTMOLE_ENUMLIST_FILTER_RUNESANDAMMUNITION [ "air rune","fire rune","iron arrow","law rune" ]
 CONST_GIANTMOLE_RULE (name:VAR_GIANTMOLE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1866,7 +1866,7 @@ label: 'hide drops: other'
 group: giant mole
 enum: ["yew logs","shark","mithril bar","iron ore","oyster pearls"]
 */
-#define VAR_GIANTMOLE_ENUMLIST_FILTER_OTHER []
+#define VAR_GIANTMOLE_ENUMLIST_FILTER_OTHER [ "mithril bar","oyster pearls" ]
 CONST_GIANTMOLE_RULE (name:VAR_GIANTMOLE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
