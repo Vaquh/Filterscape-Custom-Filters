@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from typing import cast
 
-from builder import FilterMetadata, build_header, build_body, build_footer, join_non_empty
+from buildlib import FilterMetadata, build_header, build_body, build_footer, join_non_empty
 from paths import FILTER_PATH, MODULE_DIR
 
 def load_filter_metadata() -> FilterMetadata:
