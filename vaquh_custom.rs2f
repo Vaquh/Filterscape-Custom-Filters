@@ -4052,7 +4052,7 @@ label: 'hide drops: supplies'
 group: the leviathan
 enum: ["prayer potion(3)","ranging potion(2)","sea turtle"]
 */
-#define VAR_THELEVIATHAN_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_THELEVIATHAN_ENUMLIST_FILTER_SUPPLIES [ "ranging potion(2)" ]
 CONST_THELEVIATHAN_RULE (name:VAR_THELEVIATHAN_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -4061,9 +4061,9 @@ CONST_THELEVIATHAN_RULE (name:VAR_THELEVIATHAN_ENUMLIST_FILTER_SUPPLIES) {
 type: enumlist
 label: 'hide drops: resources'
 group: the leviathan
-enum: ["pure essence","iron ore","silver ore","coal","gold ore","adamantite ore","runite ore","sapphire","emerald","ruby","uncut ruby","uncut diamond","dragon javelin heads","dragon bolts (unf)","onyx bolt tips","raw manta ray","anglerfish"]
+enum: ["coal","gold ore","dragon javelin heads","anglerfish","uncut ruby","uncut diamond","runite ore","dragon bolts (unf)","aether catalyst","iron ore","silver ore","adamantite ore","sapphire","emerald","ruby","onyx bolt tips","raw manta ray"]
 */
-#define VAR_THELEVIATHAN_ENUMLIST_FILTER_RESOURCES []
+#define VAR_THELEVIATHAN_ENUMLIST_FILTER_RESOURCES [ "iron ore","silver ore","sapphire","emerald" ]
 CONST_THELEVIATHAN_RULE (name:VAR_THELEVIATHAN_ENUMLIST_FILTER_RESOURCES) {
   hidden = true;
 }
@@ -4074,7 +4074,7 @@ label: 'hide drops: runes and ammunition'
 group: the leviathan
 enum: ["bronze arrow","mithril arrow","adamant arrow","rune arrow","body rune","earth rune","smoke rune","soul rune"]
 */
-#define VAR_THELEVIATHAN_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_THELEVIATHAN_ENUMLIST_FILTER_RUNESANDAMMUNITION [ "bronze arrow","mithril arrow","adamant arrow","rune arrow","body rune","earth rune" ]
 CONST_THELEVIATHAN_RULE (name:VAR_THELEVIATHAN_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
